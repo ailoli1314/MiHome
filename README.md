@@ -23,7 +23,7 @@ MiNickname = 小伟
 AuthKey = 123456789
 ```
 
-##快速开始
+## 快速开始
 ### 本地使用
 ```python
 from MiApi import MiService
