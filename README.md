@@ -15,7 +15,6 @@ pip install -r requirements.txt
 [account]
 MiUsername = 123456789
 MiPassword = mi123456
-```
 MiNickname = 小伟
 ```
 如需使用HttpApi，则配置http鉴权，示例：
