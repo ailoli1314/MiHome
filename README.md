@@ -3,7 +3,7 @@
 
 ## 安装
 ```
-git clone https://gitee.com/xiaoweigod01/simple-mi-home
+git clone https://gitee.com/blokura/simple-mi-home
 cd simple-mi-home
 pip install -r requirements.txt
 ```
@@ -13,8 +13,8 @@ pip install -r requirements.txt
 在`config/config.ini`内配置小米账号，示例：
 ```
 [account]
-MiUsername = 123456789
-MiPassword = mi123456
+MiUsername = 小米账号
+MiPassword = 小米账号的密码
 MiNickname = 小伟
 ```
 如需使用HttpApi，则配置http鉴权，示例：
