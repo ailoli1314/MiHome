@@ -64,8 +64,8 @@ def do_action():
         return jsonify(code=404, message="Device not found"), 404
     sid = data.get('sid')
     aid = data.get('aid')
-    action = data.get('action')
-    return jsonify(device.do_action(device, sid, aid, action))
+    action = data.get('params')
+    return jsonify(device.do_action(sid, aid, action))
 
 
 @app.route("/api/get_prop", methods=['POST'])

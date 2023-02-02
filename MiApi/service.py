@@ -58,6 +58,7 @@ class Device:
 
     def get_device_prop(self, sid, pid):
         uri = "/miotspec/prop/get"
+        params=[{"did": self.device_id, "piid": pid, "siid": sid}]
         params = dict(params=[{"did": self.device_id, "piid": pid, "siid": sid}])
         result = self.http_request(uri, params)
         code = result.get("code")
@@ -122,7 +123,7 @@ class MiService:
         params = {"getVirtualModel": False, "getHuamiDevices": 0}
         result = self.__http_request(uri, data=params)
         device_list = result.get("result").get("list")
-        return device_list if device_list else list()
+        return result
 
     def get_device_list(self):
         result = self.__get_device_list()
