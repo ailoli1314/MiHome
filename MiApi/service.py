@@ -58,7 +58,6 @@ class Device:
 
     def get_device_prop(self, sid, pid):
         uri = "/miotspec/prop/get"
-        params=[{"did": self.device_id, "piid": pid, "siid": sid}]
         params = dict(params=[{"did": self.device_id, "piid": pid, "siid": sid}])
         result = self.http_request(uri, params)
         code = result.get("code")
