@@ -56,7 +56,7 @@ def handle_form(req: request):
 
 @app.route('/api/do_action', methods=['POST'])
 def do_action():
-    data = handle_form(request)
+    data = json.loads(request.get_data().decode('utf-8'))
     device_id = data.get('device_id')
     device_name = data.get("device_name")
     device = locate_device(device_id, device_name)
@@ -70,7 +70,7 @@ def do_action():
 
 @app.route("/api/get_prop", methods=['POST'])
 def get_prop():
-    data = handle_form(request)
+    data = json.loads(request.get_data().decode('utf-8'))
     device_id = data.get('device_id')
     device_name = data.get("device_name")
     device = locate_device(device_id, device_name)
@@ -83,7 +83,7 @@ def get_prop():
 
 @app.route("/api/get_props", methods=['POST'])
 def get_props():
-    data = handle_form(request)
+    data = json.loads(request.get_data().decode('utf-8'))
     device_id = data.get('device_id')
     device_name = data.get("device_name")
     device = locate_device(device_id, device_name)
@@ -95,7 +95,7 @@ def get_props():
 
 @app.route("/api/set_prop", methods=['POST'])
 def set_prop():
-    data = handle_form(request)
+    data = json.loads(request.get_data().decode('utf-8'))
     device_id = data.get('device_id')
     device_name = data.get("device_name")
     device = locate_device(device_id, device_name)
@@ -109,7 +109,7 @@ def set_prop():
 
 @app.route("/api/set_props", methods=['POST'])
 def set_props():
-    data = handle_form(request)
+    data = json.loads(request.get_data().decode('utf-8'))
     device_id = data.get('device_id')
     device_name = data.get("device_name")
     device = locate_device(device_id, device_name)
